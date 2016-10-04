@@ -11,7 +11,8 @@ Good luck, working Padawan. Tomato pies await you.
 Copy it in `/usr/bin`, run `tomato-pie` in your terminal. Run `tomato-pie -d` if you want to use the default schedule with four 25 mins. work sessions with 5 mins. small breaks and a large 15 mins. break at the end.  Select `y/Y` or `n/N` if you want to go again or not.
 
 ## Issues
-None, as far as I know. Please file bugs, if they appear.
+None problematic, as far as I know. Please file bugs, if they appear.
+It will feature some nice echo text in the near future for the sake of it attracting more attention.
 
 ## License
 Project created under the Simplified BSD License by Alexandru Tenie.
