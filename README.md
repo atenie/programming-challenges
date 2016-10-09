@@ -8,7 +8,7 @@ I like to use the Pomodoro technique to practice some form of self-discipline. N
 Good luck, working Padawan. Tomato pies await you.
 
 ## Installation and usage
-Copy it in `/usr/bin`, run `tomato-pie` in your terminal. Run `tomato-pie -d` if you want to use the default schedule with four 25 mins. work sessions with 5 mins. small breaks and a large 15 mins. break at the end.  Select `y/Y` or `n/N` if you want to go again or not.
+Copy it in `/usr/local/bin`, run `tomato-pie` in your terminal. Run `tomato-pie -d` if you want to use the default schedule with four 25 mins. work sessions with 5 mins. small breaks and a large 15 mins. break at the end.  Select `y/Y` or `n/N` if you want to go again or not.
 
 ## Issues
 None problematic, as far as I know. Please file bugs, if they appear.
