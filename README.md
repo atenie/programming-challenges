@@ -10,7 +10,8 @@
 - [x] 009 - Basic converter (binary, hexadecimal, decimal, octal, etc)
 - [x] 010 - Temperature converter
 - [x] 011 - ROT13 converter
-- [ ] 012 - (to be translated) N Queens problem
+- [x] 012 - (to be translated) N Queens problem
+- [ ] 013 - ?
 
 ## Synopsis
 Small, mostly console-oriented C++ programs for the sake of variety to my programming learning experience. More to come in the future.
