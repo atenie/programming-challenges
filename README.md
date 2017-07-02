@@ -10,7 +10,7 @@
 - [x] 009 - Basic converter (binary, hexadecimal, decimal, octal, etc)
 - [x] 010 - Temperature converter
 - [x] 011 - ROT13 converter
-- [x] 012 - (to be translated) N Queens problem
+- [x] 012 - N Queens problem
 - [ ] 013 - ?
 
 ## Synopsis
