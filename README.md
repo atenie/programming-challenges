@@ -9,15 +9,12 @@
 - [x] 008 - Factorial
 - [x] 009 - Basic converter (binary, hexadecimal, decimal, octal, etc)
 - [x] 010 - Temperature converter
-- [x] 011 - ROT13 converter
+- [ ] 011 - ROT13 converter
 - [x] 012 - N Queens problem
-- [ ] 013 - ?
+- [x] 013 - Basic Database in C++ with Qt GUI
 
 ## Synopsis
 Small, mostly console-oriented C++ programs for the sake of variety to my programming learning experience. More to come in the future.
-
-## Issues
-My limited C++ knowledge.
 
 ## License
 Project created under the Simplified BSD License by Alexandru Tenie.
