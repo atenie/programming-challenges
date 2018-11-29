@@ -1,7 +1,7 @@
 # Programming Challenges
 - [x] 001 - FizzBuzz
 - [x] 002 - Binary Search (integers, strings, etc)
-- [x] 003 - BMI Calculator (CLI or GUI)
+- [x] 003 - BMI Calculator
 - [x] 004 - Quine
 - [x] 005 - Anagram Checker
 - [x] 006 - Dynamic multidimensional arrays
@@ -14,7 +14,7 @@
 - [x] 013 - Basic Database in C++ with Qt GUI
 
 ## Synopsis
-Small, mostly console-oriented C++ programs for the sake of variety to my programming learning experience. More to come in the future.
+Small, mostly console-oriented C++ programs for the sake of variety to my programming learning experience.
 
 ## License
 Project created under the Simplified BSD License by Alexandru Tenie.
