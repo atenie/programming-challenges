@@ -16,5 +16,9 @@
 ## Synopsis
 Small, mostly console-oriented C++ programs for the sake of variety to my programming learning experience.
 
+## What I've learned
+* 001->012 Have been basic things I've done in my beginner attempts at understanding various small concepts.
+* 013 Has been one of my more difficult projects in university, as it meant programming on my Ubuntu machine a CRUD/MVC in C++ with basic CSV file management, Qt GUI and code coverage that I've done via lcov.
+
 ## License
 Project created under the Simplified BSD License by Alexandru Tenie.
