@@ -12,7 +12,7 @@
 - [ ] 011 - ROT13 converter
 - [x] 012 - N Queens problem
 - [x] 013 - Basic Database in C++ with Qt GUI
-- [x] 014 - Bash Pomodoro Timer (pomodoro-pie)
+- [x] 014 - Bash Pomodoro Timer (tomato-pie)
 
 ## Synopsis
 Small, mostly console-oriented programs for the sake of variety to my programming learning experience.
