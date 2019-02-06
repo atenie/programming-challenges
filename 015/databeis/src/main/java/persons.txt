@@ -1,0 +1,4 @@
+0,Ana,Popescu,Vaslui,
+1,Vasile,Borbely,Bacau,
+2,Ioan,Vasilescu,Targoviste,
+3,Adriana,Moldovan,Iasi,
