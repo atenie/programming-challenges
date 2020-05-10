@@ -16,6 +16,7 @@
 - [x] 015 - Basic database manager in Java with memory, .csv and SQL support
 - [x] 016 - Half-working Pacman clone in JavaFX
 - [x] 017 - Half-working webapp 2048 clone
+- [x] 018 - Farthest Neighbour algorithm with funny (not real) data
 
 
 
@@ -29,6 +30,7 @@ Small, mostly console-oriented programs for the sake of variety to my programmin
 * 015 Is a database manager and part of what I've learned in my Java courses at university, with support for .csv files and SQL databases.
 * 016 Is a half-working Pacman clone with a GUI in JavaFX. Part of the challenge was rendering the map only by using Streams.
 * 017 Is a half-working 2048 webapp clone, using a Tomcat server and with basic JSF/XHTML code for the frontend side.
+* 018 Python ML project for university. Features unrealistic data, but I thought it was a funny addition.
 
 ## License
 Project created under the Simplified BSD License by Alexandru Tenie.
