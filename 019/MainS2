@@ -1,0 +1,15 @@
+class Main {
+    public static void main(String args[]){
+        int x, y;
+        y 10;
+        x = y;
+        System.out.println(5);
+        if (x>=0)
+            System.out.println(y);
+        else
+            System.out.println(x);
+        while (1-y <= -x) {
+            y = x * (-y + 5);
+        }
+    }
+}

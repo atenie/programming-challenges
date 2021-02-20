@@ -1,0 +1,92 @@
+import java_cup.runtime.*;
+import java_cup.runtime.ComplexSymbolFactory;
+import java_cup.runtime.ComplexSymbolFactory.ComplexSymbol;
+import java_cup.runtime.ComplexSymbolFactory.Location;
+import java_cup.runtime.ScannerBuffer;
+import java.io.*;
+
+parser code {:
+  public Parser(MParser lex, ComplexSymbolFactory sf) {
+    super(lex,sf);
+  }
+  public static void main(String[] args) throws Exception {
+      // Initialisierung von symbol factory
+      ComplexSymbolFactory csf = new ComplexSymbolFactory();
+      // Initialisierung von buffering scanner wrapper
+      ScannerBuffer lexer = new ScannerBuffer(new MParser(new BufferedReader(new FileReader(args[0])),csf));
+      // start von Parsing
+      Parser p = new Parser(lexer,csf);
+      p.parse();
+      // for debugging
+    //   p.debug_parse();
+  }
+  /* Hardcoded Syntax Error Methode */ 
+  public void syntax_error(Symbol cur_token){
+      ComplexSymbol cs = (ComplexSymbol)cur_token;
+      Location loc = cs.getLeft();
+      System.out.println("Syntax error in line "+ loc.getLine()+", invalid token "+cs.getName());
+  }
+
+:}; 
+
+/* Terminal Symbole */ 
+terminal SEMICOLON, COMMA, DOT, LPAR, RPAR,LBRACKET, RBRACKET, BEGIN, END, IF, ELSE, WHILE, READ, WRITE, ASSIGN, SYSTEM, OUT, PRINTLN, PUBLIC, STATIC, MAIN, CLASS, ARGS;
+terminal TYPE, BINOP, BUNOP, COMP, BBINOP, INTCONST;
+terminal IDENT,STRINGCONST;
+terminal BOOLCONST;
+
+/* Non-Terminal Symbole */ 
+non terminal program, main_class, main_function, decllist,decl,stmtlist,identlist,stmt,expr,cond,print;
+
+precedence left ELSE, BINOP, BUNOP, BBINOP;
+
+/* Regeln */
+main_class::= CLASS IDENT:identifier BEGIN main_function END
+    ;
+
+main_function::= PUBLIC STATIC TYPE MAIN LPAR TYPE ARGS LBRACKET RBRACKET RPAR BEGIN program END
+    ;
+
+program   ::=  decllist:d stmtlist:s
+    ;
+decllist  ::=  decl:d decllist:dl
+    | /* empty */
+    ;
+stmtlist  ::= stmtlist:sl stmt:s
+    | /* empty */
+        ;
+decl ::= TYPE IDENT:identifier identlist:il  SEMICOLON
+    ;
+identlist  ::= identlist:il COMMA IDENT:identifier
+    | /* empty */
+    ;
+stmt ::= SEMICOLON
+    | BEGIN stmtlist:sl END
+    | IDENT:lhs ASSIGN expr:rhs SEMICOLON
+    | IDENT:lhs ASSIGN READ LPAR RPAR SEMICOLON
+    | IDENT:lhs ASSIGN READ LPAR STRINGCONST:s RPAR SEMICOLON
+    | WRITE LPAR expr:e RPAR SEMICOLON
+    | WRITE LPAR STRINGCONST:s RPAR SEMICOLON
+    | IF LPAR cond:c RPAR stmt:s
+    | IF LPAR cond:c RPAR stmt:t ELSE stmt:e
+    | WHILE LPAR cond:c RPAR stmt:s
+    | print SEMICOLON
+    ;
+cond ::= BOOLCONST:c
+    | LPAR cond:c RPAR
+    | expr:e1 COMP:op expr:e2
+    | BUNOP cond:c
+    | cond:c1 BBINOP:op cond:c2
+    | cond:c1 BBINOP error:e {: parser.report_error("\r\n",e); :}
+    ;
+expr ::= IDENT:identifier
+    | INTCONST:constant
+    | LPAR expr:e RPAR
+    | BINOP expr:e
+    | expr:e1 BINOP:op expr:e2
+    ;
+
+print ::=   SYSTEM DOT OUT DOT PRINTLN LPAR IDENT:identifier RPAR
+            |   SYSTEM DOT OUT DOT PRINTLN LPAR INTCONST:constant RPAR
+            |   error:e {: parser.report_error("\r\n",e); :}
+            ;

@@ -17,7 +17,7 @@
 - [x] 016 - Half-working Pacman clone in JavaFX
 - [x] 017 - Half-working webapp 2048 clone
 - [x] 018 - Farthest Neighbour algorithm with funny (not real) data
-
+- [x] 019 - Java parser written in JFlex and CUP with a somewhat limited but functional grammar.
 
 
 ## Synopsis
